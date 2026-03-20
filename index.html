@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ذكريات عيد الفطر 2026 - م. أحمد عمرو ابوالحاج</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="light-theme">
+    <!-- Simplified Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <div class="loader-text">جاري تحضير الذكريات...</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-accent">ذكريات</span> العيد
+            </div>
+            <div class="creator">
+                م. أحمد عمرو ابوالحاج
+            </div>
+        </div>
+    </nav>
+
+    <!-- Festive Hero Section -->
+    <header class="hero">
+        <div class="hero-bg-container">
+            <img src="hero-bg.png" alt="Eid Greeting Background" class="hero-bg-img">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content" data-aos="zoom-in">
+            <h2 class="pre-greeting">بمناسبة حلول عيد الفطر السعيد</h2>
+            <h1 class="greeting">المهندس أحمد عمرو ابوالحاج</h1>
+            <p class="eid-wish">يهنئكم بحلول عيد الفطر المبارك - 2026</p>
+            <div class="location-badge">
+                <i class="fas fa-map-marker-alt"></i> مسير - كفر الشيخ
+            </div>
+            <p class="verse">"كل عام وأنتم بخير وصحة وسعادة"</p>
+            <div class="stats" data-aos="fade-up" data-aos-delay="400">
+                <div class="stat-item">
+                    <span id="photo-count" class="stat-number">107</span>
+                    <span class="stat-label">صورة تذكارية</span>
+                </div>
+            </div>
+            <a href="#gallery" class="btn-primary ripple">
+                استعرض الصور والذكريات <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="fancy-title">معرض صور العيد</h2>
+            <div class="underline"></div>
+            <p class="header-desc">اضغط على أي صورة لعرضها بالحجم الكامل والتحميل المجاني</p>
+        </div>
+
+        <div class="gallery-grid" id="image-grid">
+            <!-- Dynamic loading -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>صمم بواسطة <span class="designer-name">م. أحمد عمرو ابوالحاج</span></p>
+            <p class="tagline">كلية الذكاء الاصطناعي - 2026</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <div class="lightbox-img-wrapper">
+            <img class="lightbox-img" id="lightbox-img" src="" alt="">
+        </div>
+        <div class="lightbox-caption">
+            <h3 id="img-name"></h3>
+            <a id="download-btn" href="" download class="download-link">
+                تحميل الصورة <i class="fas fa-download"></i>
+            </a>
+        </div>
+        <div class="lightbox-nav">
+            <button id="prev-btn" class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+            <button id="next-btn" class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
