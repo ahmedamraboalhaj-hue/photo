@@ -3,104 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ذكريات عيد الفطر 2026 - م. أحمد عمرو ابوالحاج</title>
+    <title>ذكريات العيد 2026 - م. أحمد عمرو ابوالحاج</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body class="light-theme">
-    <!-- Simplified Preloader -->
-    <div id="preloader">
-        <div class="loader-content">
-            <div class="loader-circle"></div>
-            <div class="loader-text">جاري تحضير الذكريات...</div>
+<body class="theme-fitr" id="app-body">
+
+    <!-- شاشة اختيار العيد -->
+    <div id="eid-picker" class="eid-picker">
+        <div class="picker-orb picker-orb--1"></div>
+        <div class="picker-orb picker-orb--2"></div>
+        <div class="picker-content">
+            <p class="picker-eyebrow">م. أحمد عمرو ابوالحاج</p>
+            <h1 class="picker-title">ذكريات العيد</h1>
+            <p class="picker-subtitle">اختر العيد لاستعراض الصور والتهنئة</p>
+            <div class="picker-cards">
+                <button class="picker-card picker-card--fitr" data-eid="fitr" type="button">
+                    <div class="picker-card-stripe"></div>
+                    <div class="picker-card-body">
+                        <span class="picker-emoji">🌙</span>
+                        <h2>عيد الفطر</h2>
+                        <p>107 صورة تذكارية من احتفالاتنا</p>
+                        <span class="picker-go">دخول <i class="fas fa-arrow-left"></i></span>
+                    </div>
+                </button>
+                <button class="picker-card picker-card--adha" data-eid="adha" type="button">
+                    <div class="picker-card-stripe"></div>
+                    <div class="picker-card-body">
+                        <span class="picker-emoji">🕌</span>
+                        <h2>عيد الأضحى</h2>
+                        <p>تهنئة ومعرض صور العيد الكبير</p>
+                        <span class="picker-go">دخول <i class="fas fa-arrow-left"></i></span>
+                    </div>
+                </button>
+            </div>
         </div>
     </div>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-accent">ذكريات</span> العيد
-            </div>
-            <div class="creator">
-                م. أحمد عمرو ابوالحاج
-            </div>
-        </div>
-    </nav>
+    <div id="preloader">
+        <div class="loader-ring"></div>
+        <p class="loader-text">جاري التحميل...</p>
+    </div>
 
-    <!-- Festive Hero Section -->
-    <header class="hero">
-        <div class="hero-bg-container">
-            <img src="hero-bg.png" alt="Eid Greeting Background" class="hero-bg-img">
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content" data-aos="zoom-in">
-            <h2 class="pre-greeting">بمناسبة حلول عيد الفطر السعيد</h2>
-            <h1 class="greeting">المهندس أحمد عمرو ابوالحاج</h1>
-            <p class="eid-wish">يهنئكم بحلول عيد الفطر المبارك - 2026</p>
-            <div class="location-badge">
-                <i class="fas fa-map-marker-alt"></i> مسير - كفر الشيخ
-            </div>
-            <p class="verse">"كل عام وأنتم بخير وصحة وسعادة"</p>
-            <div class="stats" data-aos="fade-up" data-aos-delay="400">
-                <div class="stat-item">
-                    <span id="photo-count" class="stat-number">107</span>
-                    <span class="stat-label">صورة تذكارية</span>
+    <div id="main-app" class="main-app hidden">
+
+        <nav class="site-nav">
+            <div class="nav-inner">
+                <a href="#" class="nav-logo">
+                    <span class="nav-logo-dot"></span>
+                    ذكريات <strong id="nav-eid-label">العيد</strong>
+                </a>
+                <div class="nav-end">
+                    <button id="switch-eid-btn" class="btn-ghost" type="button">
+                        <i class="fas fa-exchange-alt"></i> تغيير العيد
+                    </button>
+                    <span class="nav-creator">م. أحمد عمرو ابوالحاج</span>
                 </div>
             </div>
-            <a href="#gallery" class="btn-primary ripple">
-                استعرض الصور والذكريات <i class="fas fa-chevron-down"></i>
-            </a>
-        </div>
-    </header>
+        </nav>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery-section">
-        <div class="section-header" data-aos="fade-up">
-            <h2 class="fancy-title">معرض صور العيد</h2>
-            <div class="underline"></div>
-            <p class="header-desc">اضغط على أي صورة لعرضها بالحجم الكامل والتحميل المجاني</p>
-        </div>
-
-        <div class="gallery-grid" id="image-grid">
-            <!-- Dynamic loading -->
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <p>صمم بواسطة <span class="designer-name">م. أحمد عمرو ابوالحاج</span></p>
-            <p class="tagline">كلية الذكاء الاصطناعي - 2026</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+        <header class="hero">
+            <div class="hero-media">
+                <img src="hero-bg.png" alt="" class="hero-img hero-img--fitr">
+                <div class="hero-img hero-img--adha" aria-hidden="true"></div>
             </div>
-        </div>
-    </footer>
+            <div class="hero-shade"></div>
+            <div class="hero-wrap">
+                <div class="hero-card" data-aos="fade-up">
+                    <p class="hero-tag" id="pre-greeting"></p>
+                    <h1 class="hero-name">المهندس أحمد عمرو ابوالحاج</h1>
+                    <p class="hero-wish" id="eid-wish"></p>
+                    <div class="hero-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> مسير - كفر الشيخ</span>
+                    </div>
+                    <p class="hero-verse" id="verse-text"></p>
+                    <div class="hero-stat">
+                        <strong id="photo-count">0</strong>
+                        <span>صورة تذكارية</span>
+                    </div>
+                    <a href="#gallery" class="btn-main" id="hero-cta">
+                        استعرض الصور <i class="fas fa-images"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
 
-    <!-- Lightbox -->
+        <section id="gallery" class="gallery">
+            <div class="gallery-head" data-aos="fade-up">
+                <h2 id="gallery-title">معرض الصور</h2>
+                <p id="gallery-desc">اضغط زر التحميل لحفظ الصورة على هاتفك مباشرة</p>
+            </div>
+
+            <div id="empty-gallery" class="empty-state hidden">
+                <div class="empty-icon">📷</div>
+                <h3>الصور قريباً</h3>
+                <p>ارفع صور عيد الأضحى في مجلد <code>eid-adha</code></p>
+            </div>
+
+            <div class="gallery-grid" id="image-grid"></div>
+        </section>
+
+        <footer class="site-footer">
+            <p>صمم بواسطة <strong>م. أحمد عمرو ابوالحاج</strong></p>
+            <p class="footer-sub">كلية الذكاء الاصطناعي — 2026</p>
+        </footer>
+    </div>
+
     <div id="lightbox" class="lightbox">
-        <span class="close-lightbox">&times;</span>
-        <div class="lightbox-img-wrapper">
-            <img class="lightbox-img" id="lightbox-img" src="" alt="">
+        <button class="lb-close" type="button" aria-label="إغلاق">&times;</button>
+        <button id="prev-btn" class="lb-nav lb-nav--prev" type="button"><i class="fas fa-chevron-right"></i></button>
+        <button id="next-btn" class="lb-nav lb-nav--next" type="button"><i class="fas fa-chevron-left"></i></button>
+        <div class="lb-stage">
+            <img class="lb-img" id="lightbox-img" src="" alt="">
         </div>
-        <div class="lightbox-caption">
+        <div class="lb-bar">
             <h3 id="img-name"></h3>
-            <a id="download-btn" href="" download class="download-link">
-                تحميل الصورة <i class="fas fa-download"></i>
+            <a id="download-btn" href="#" class="btn-main btn-main--sm">
+                تحميل <i class="fas fa-download"></i>
             </a>
-        </div>
-        <div class="lightbox-nav">
-            <button id="prev-btn" class="nav-btn"><i class="fas fa-chevron-right"></i></button>
-            <button id="next-btn" class="nav-btn"><i class="fas fa-chevron-left"></i></button>
         </div>
     </div>
+
+    <div id="toast" class="toast hidden" role="status"></div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
